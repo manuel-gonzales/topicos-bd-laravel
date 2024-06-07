@@ -1,6 +1,10 @@
-# Página para práctica de controladores
+# Página para práctica de migraciones
 
-Este proyecto fue creado con Laravel y personalizado con Bootstrap.
+Este proyecto fue creado con Laravel y personalizado con Bootstrap. La base de datos utilizada es HeidiSQL.
+
+### Imagen de la base de datos en HeidiSQL
+
+![image](https://github.com/manuel-gonzales/page-nav/assets/141975981/e4ea280f-3b28-4b9a-b83e-0d07e1588654)
 
 ## Instalación propia
 
