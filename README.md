@@ -1,6 +1,6 @@
-# Página para práctica de migraciones
+# Página para práctica de Laravel
 
-Este proyecto fue creado con Laravel y personalizado con Bootstrap. La base de datos utilizada es HeidiSQL.
+Este proyecto se creó para desarrollar los temas del curso de Tópicos en Base de Datos. Fue creado con Laravel y personalizado con Bootstrap. La base de datos utilizada es HeidiSQL.
 
 ### Imagen de la base de datos en HeidiSQL
 
