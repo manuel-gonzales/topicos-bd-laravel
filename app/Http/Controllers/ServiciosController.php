@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Servicio;
+use App\Http\Requests\CreateServicioRequest;
 
 class ServiciosController extends Controller
 {
@@ -17,13 +18,8 @@ class ServiciosController extends Controller
         return view('servicios.create');
     }
 
-    public function store(){
-        $camposv = request()->validate([
-            'titulo' => 'required',
-            'descripcion'=> 'required',
-        ]);
-
-        Servicio::create($camposv);
+    public function store(CreateServicioRequest $request){
+        Servicio::create($request->validated());
 
         return redirect()->route('servicios.index');
     }

@@ -13,18 +13,20 @@
             @csrf
             <tr>
                 <th>
-                    Titulo
+                    Título
                 </th>
                 <td>
-                    <input type="text" name="titulo">
+                    <input type="text" name="titulo"><br>
+                    {{ $errors->first('titulo') }}
                 </td>
             </tr>
             <tr>
                 <th>
-                    Descripcion
+                    Descripción
                 </th>
                 <td>
-                    <input type="text" name="descripcion">
+                    <input type="text" name="descripcion"><br>
+                    {{ $errors->first('descripcion') }}
                 </td>
             </tr>
             <tr>
