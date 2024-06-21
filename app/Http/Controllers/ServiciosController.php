@@ -18,6 +18,20 @@ class ServiciosController extends Controller
         return view('servicios.create');
     }
 
+    public function edit(Servicio $id){
+        return view('servicios.edit',[
+            'servicio' => $id
+        ]);
+    }
+
+    public function update($id, CreateServicioRequest $request){
+        $servicio = Servicio::findOrFail($id);
+
+        $servicio->update($request->validated());
+
+        return redirect()->route('servicios.show',$id);
+    }
+
     public function store(CreateServicioRequest $request){
         Servicio::create($request->validated());
 

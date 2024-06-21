@@ -7,6 +7,7 @@
         <tr>
             <td colspan="4">
                 {{ $servicio->titulo }}
+                <a href="{{ route('servicios.edit',$servicio) }}">Editar</a>
             </td>
         </tr>
         <tr>
