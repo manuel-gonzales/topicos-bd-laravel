@@ -15,7 +15,9 @@ class ServiciosController extends Controller
     }
 
     public function create(){
-        return view('servicios.create');
+        return view('servicios.create',[
+            'servicio' => new Servicio
+        ]);
     }
 
     public function edit(Servicio $id){

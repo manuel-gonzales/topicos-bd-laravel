@@ -17,7 +17,7 @@
         </tr>
         <tr>
             <td colspan="4">
-                {{ $servicio->created_at->diffForHumans() }}
+                Servicio creado {{ $servicio->created_at->diffForHumans() }}
             </td>
         </tr>
     </table>

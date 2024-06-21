@@ -9,41 +9,10 @@
                 Editar servicio
             </th>
         </tr>
-        @if($errors->any())
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>
-                        {{ $error }}
-                    </li>
-                @endforeach
-            </ul>
-        @endif
+        @include('partials.validation-errors')
         <form action="{{ route('servicios.update',$servicio) }}" method="post">
-            @csrf
             @method('PATCH')
-            <tr>
-                <th>
-                    Título
-                </th>
-                <td>
-                    <input type="text" name="titulo" value="{{ old('titulo',$servicio->titulo) }}">
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    Descripción
-                </th>
-                <td>
-                    <input type="text" name="descripcion" value="{{ old('descripcion',$servicio->descripcion) }}">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" text-align="center">
-                    <button>
-                        Actualizar
-                    </button>
-                </td>
-            </tr>
+            @include('partials.form', ['btnText' => 'Actualizar'])
         </form>
     </table>
 @endsection
