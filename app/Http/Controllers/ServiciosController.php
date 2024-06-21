@@ -31,7 +31,7 @@ class ServiciosController extends Controller
 
         $servicio->update($request->validated());
 
-        return redirect()->route('servicios.show',$id);
+        return redirect()->route('servicios.show', $id);
     }
 
     public function store(CreateServicioRequest $request){
@@ -42,5 +42,11 @@ class ServiciosController extends Controller
 
     public function show($id){
         return view('servicios.show', ['servicio' => Servicio::find($id)]);
+    }
+
+    public function destroy(Servicio $servicio){
+        $servicio->delete();
+
+        return redirect()->route('servicios.index');
     }
 }

@@ -10,7 +10,7 @@
             </th>
         </tr>
         @include('partials.validation-errors')
-        <form action="{{ route('servicios.update',$servicio) }}" method="post">
+        <form action="{{ route('servicios.update', $servicio) }}" method="POST">
             @method('PATCH')
             @include('partials.form', ['btnText' => 'Actualizar'])
         </form>

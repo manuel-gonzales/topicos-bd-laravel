@@ -4,7 +4,7 @@
         Título
     </th>
     <td>
-        <input type="text" name="titulo" value="{{ old('titulo',$servicio->titulo) }}"><br>
+        <input type="text" name="titulo" value="{{ old('titulo', $servicio->titulo) }}"><br>
         {{ $errors->first('titulo') }}
     </td>
 </tr>
@@ -13,7 +13,7 @@
         Descripción
     </th>
     <td>
-        <input type="text" name="descripcion" value="{{ old('descripcion',$servicio->descripcion) }}"><br>
+        <input type="text" name="descripcion" value="{{ old('descripcion', $servicio->descripcion) }}"><br>
         {{ $errors->first('descripcion') }}
     </td>
 </tr>
