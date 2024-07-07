@@ -24,4 +24,8 @@ Route::delete('servicios/{servicio}', $controller_route.'ServiciosController@des
 
 Route::view('contacto','contacto')->name('contacto');
 
+Route::post('contacto', $controller_route.'ContactoController@store');
+
+Route::view('contacto/enviado', 'emails.mensaje-enviado')->name('mensaje-enviado');
+
 //Route::resource('servicios','App\Http\Controllers\ServiciosController')->only('index','show');
