@@ -15,6 +15,6 @@ class ContactoController extends Controller
 
         Mail::to('t032700220@unitru.edu.pe')->send(new MensajeRecibido($mensaje));
 
-        return redirect()->route('mensaje-enviado');
+        return back()->with('estado', 'Gracias por ponerte en contacto, te responderemos a la brevedad posible.');
     }
 }

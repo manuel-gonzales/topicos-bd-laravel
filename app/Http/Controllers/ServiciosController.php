@@ -20,24 +20,22 @@ class ServiciosController extends Controller
         ]);
     }
 
-    public function edit(Servicio $id){
+    public function edit(Servicio $servicio){
         return view('servicios.edit',[
-            'servicio' => $id
+            'servicio' => $servicio
         ]);
     }
 
-    public function update($id, CreateServicioRequest $request){
-        $servicio = Servicio::findOrFail($id);
-
+    public function update(Servicio $servicio, CreateServicioRequest $request){
         $servicio->update($request->validated());
 
-        return redirect()->route('servicios.show', $id);
+        return redirect()->route('servicios.show', $servicio)->with('estado', 'El servicio fue actualizado correctamente.');
     }
 
     public function store(CreateServicioRequest $request){
         Servicio::create($request->validated());
 
-        return redirect()->route('servicios.index');
+        return redirect()->route('servicios.index')->with('estado', 'El servicio fue creado correctamente.');
     }
 
     public function show($id){
@@ -47,6 +45,6 @@ class ServiciosController extends Controller
     public function destroy(Servicio $servicio){
         $servicio->delete();
 
-        return redirect()->route('servicios.index');
+        return redirect()->route('servicios.index')->with('estado', 'El servicio fue eliminado correctamente.');
     }
 }
