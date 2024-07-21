@@ -13,3 +13,5 @@ Route::resource('servicios', $controller_route.'ServiciosController')->names('se
 Route::view('contacto','contacto')->name('contacto');
 
 Route::post('contacto', $controller_route.'ContactoController@store');
+
+Auth::routes(['register' => false]);
