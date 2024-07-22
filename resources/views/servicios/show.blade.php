@@ -4,6 +4,7 @@
 
 @section('content')
     <table class="table">
+        @auth
         <tr>
             <td colspan="2">
                 {{ $servicio->titulo }}
@@ -21,6 +22,7 @@
                 </form>
             </td>
         </tr>
+        @endauth
         <tr>
             <td colspan="4">
                 {{ $servicio->descripcion }}

@@ -8,7 +8,9 @@ Route::view('/', 'home')->name('home');
 
 Route::view('nosotros','nosotros')->name('nosotros');
 
-Route::resource('servicios', $controller_route.'ServiciosController')->names('servicios');
+Route::resource('servicios', $controller_route.'ServiciosController')->names('servicios')->only('index', 'show');
+
+Route::resource('servicios', $controller_route.'ServiciosController')->names('servicios.auth')->except('index', 'show')->middleware('auth');
 
 Route::view('contacto','contacto')->name('contacto');
 

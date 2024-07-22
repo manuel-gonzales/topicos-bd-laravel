@@ -5,9 +5,11 @@
 @section('content')
     <table cellpadding="3" cellspaceing="5">
         <tr>
+            @auth
             <th colspan="4">
                 Editar servicio
             </th>
+            @endauth
         </tr>
         @include('partials.validation-errors')
         <form action="{{ route('servicios.update', $servicio) }}" method="POST">

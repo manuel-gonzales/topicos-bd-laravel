@@ -7,11 +7,13 @@
     <table class="table">
         <tbody>
             <tr>
-                <td colspan="4">
-                    <a href="{{ route('servicios.create') }}">
-                        Nuevo servicio
-                    </a>
-                </td>
+                @auth
+                    <td colspan="4">
+                        <a href="{{ route('servicios.create') }}">
+                            Nuevo servicio
+                        </a>
+                    </td>
+                @endauth
             </tr>
             <tr>
                 <th colspan="4">
